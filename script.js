@@ -25,6 +25,38 @@ btn.addEventListener('click', () => {
   }
 })
 
+function randomColor() {
+  let color = ''
+  const rng = Math.floor(Math.random() * 7)
+  switch (rng) {
+    case 0:
+      color = 'red'
+      break;
+    case 1:
+      color = 'orange'
+      break
+    case 2:
+      color = 'yellow'
+      break
+    case 3:
+      color = 'green'
+      break
+    case 4:
+      color = 'blue'
+      break
+    case 5:
+      color = 'indigo'
+      break
+    case 6:
+      color = 'violet'
+      break
+    
+    default:
+      break;
+  }
+  return color
+}
+
 function createGrid(size) {
   const container = document.getElementById('container')
   for (let i = 0; i < size; i++) {
