@@ -3,5 +3,21 @@ body * {
 }
 
 #container {
-  max-width: 960px;
+  width: 720px;
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+.active {
+  background-color: blue;
 }

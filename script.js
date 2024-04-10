@@ -8,6 +8,9 @@ function createGrid(size) {
     for (let i = 0; i < size; i++) {
       const col = document.createElement('div')
       col.className = 'col'
+      col.addEventListener('mouseenter', () => {
+        col.classList.add('active')
+      })
       row.appendChild(col)
     }
   }
