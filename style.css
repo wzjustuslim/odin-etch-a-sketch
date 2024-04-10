@@ -5,17 +5,22 @@ body * {
 #container {
   width: 720px;
   height: 720px;
+  background-color: gray;
+  border: 1px solid gray;
   display: flex;
   flex-direction: column;
+  gap: 1px;
 }
 
 .row {
   flex: 1;
   display: flex;
+  gap: 1px;
 }
 
 .col {
   flex: 1;
+  background-color: white;
 }
 
 .active {
