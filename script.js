@@ -67,7 +67,11 @@ function createGrid(size) {
       const col = document.createElement('div')
       col.className = 'col'
       col.addEventListener('mouseenter', () => {
-        col.classList.add('active')
+        const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+        const hasColor = Array.from(col.classList).some(className => colors.includes(className))
+        if (!hasColor) {
+          col.classList.add(randomColor())
+        }
       })
       row.appendChild(col)
     }
