@@ -5,8 +5,8 @@ body * {
 #container {
   width: 720px;
   height: 720px;
-  background-color: gray;
-  border: 1px solid gray;
+  background-color: black;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   gap: 1px;
@@ -20,6 +20,9 @@ body * {
 
 .col {
   flex: 1;
+}
+
+.white {
   background-color: white;
 }
 

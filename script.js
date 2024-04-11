@@ -63,14 +63,21 @@ function createGrid(size) {
     const row = document.createElement('div')
     row.className = 'row'
     container.appendChild(row)
-    for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
       const col = document.createElement('div')
-      col.className = 'col'
+      col.classList.add('col', 'white')
+      col.style.opacity = '1'
       col.addEventListener('mouseenter', () => {
         const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
         const hasColor = Array.from(col.classList).some(className => colors.includes(className))
         if (!hasColor) {
+          col.classList.remove('white')
           col.classList.add(randomColor())
+        }
+        let opacity = parseFloat(col.style.opacity)
+        if (opacity > 0) {
+          opacity -= 0.1
+          col.style.opacity = String(opacity)
         }
       })
       row.appendChild(col)
